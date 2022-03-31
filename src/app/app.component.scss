@@ -1,0 +1,25 @@
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.container{
+  border: 2px solid black;
+  margin-top: 50px;
+  width: 500px;
+  border-radius: 10px;
+
+}
+h1{
+  text-align: center;
+}
+.btn-group{
+  width: 100%;
+  margin: 5px;
+}
+.btn{
+  width: 100%;
+  margin: 5px;
+}
+
