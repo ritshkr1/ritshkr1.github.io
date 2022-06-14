@@ -1,3 +1,26 @@
-<div class="header">
-  <h1>Ritesh Kumar.</h1>
+<div class="container-fluid">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand title" href="#">
+        <img
+          src="../assets/logo1.png"
+          alt=""
+          width="150"
+          height="40"
+          class="d-inline-block align-text-top"
+        />
+      </a>
+      <div class="container-nav">
+        <a class="navbar-brand nav-content" routerLink="/about"> About</a>
+        <a class="navbar-brand nav-content" routerLink="/experience">
+          Experience</a
+        >
+        <a class="navbar-brand nav-content" routerLink="/works"> Works</a>
+        <a class="navbar-brand nav-content" routerLink="/contacts"> Contacts</a>
+      </div>
+    </div>
+  </nav>
+  <div class="body container-fluid">
+    <router-outlet></router-outlet>
+  </div>
 </div>

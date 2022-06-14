@@ -1,8 +1,14 @@
-*{
-  background-color: #1A2238;
+.container-fluid,
+.navbar {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    rgb(134, 239, 172),
+    rgb(59, 130, 246),
+    rgb(147, 51, 234)
+  );
 }
-.header{
-  background-color: #1A2238;
-  color:aliceblue;
-  text-align: center;
+.nav-content {
+  color: white;
 }
