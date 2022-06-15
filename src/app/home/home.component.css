@@ -1,0 +1,21 @@
+.my_logo {
+  text-align: center;
+
+  color: white;
+  font-family: cursive, sans-serif;
+  font-weight: 600;
+}
+.typing::after {
+  content: "|";
+  position: absolute;
+  animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
