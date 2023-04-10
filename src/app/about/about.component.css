@@ -1,5 +1,5 @@
-* {
-  background-color: white;
+.body{
+  height: 100vh;
 }
 .blocks {
   text-align: justify;
@@ -49,7 +49,7 @@
 }
 .bars-1 {
   background-color: #ffc107;
-  color: white;
+  color: aliceblue;
   font-size: 8px;
   font-weight: bold;
   text-align: right;
@@ -57,19 +57,19 @@
 }
 .bars-2 {
   background-color: #dc3545;
-  color: white;
+  color: aliceblue;
   font-size: 8px;
   font-weight: bold;
   text-align: right;
-  width: 62px;
+  width: 150px;
 }
 .bars-3 {
   background-color: #007bff;
-  color: white;
+  color: aliceblue;
   font-size: 8px;
   font-weight: bold;
   text-align: right;
-  width: 125px;
+  width: 135px;
 }
 .boxing {
   opacity: 0.75;
