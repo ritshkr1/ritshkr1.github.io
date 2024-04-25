@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./effects.component.css'],
 })
 export class EffectsComponent implements OnInit {
-  words = ['frontend developer. ', 'html', 'health', 'goods', 'supply'];
+  words = ['angular developer. ', 'html', 'health', 'goods', 'supply'];
   i = 0;
   timer: any;
   constructor() {}
