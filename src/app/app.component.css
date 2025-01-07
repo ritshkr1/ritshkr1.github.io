@@ -1,0 +1,28 @@
+/* Fix the navbar at the top of the page */
+.container-fluid,
+.navbar {
+  background: linear-gradient(
+    to right,
+    rgb(134, 239, 172),
+    rgb(59, 130, 246),
+    rgb(147, 51, 234)
+  );
+  position: fixed; /* Fix the navbar to the top */
+  top: 0; /* Align to the top */
+  left: 0;
+  right: 0;
+  width: 100%; /* Ensure the navbar takes the full width */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+  z-index: 100;
+}
+
+/* Add padding to the top of the body content to prevent overlap */
+.body {
+  padding-top: 80px; /* Adjust based on your navbar height */
+  overflow-y: auto;
+}
+
+/* Optional: If you want to change the navbar's padding */
+/* .navbar {
+  padding: 1rem 2rem; 
+} */
