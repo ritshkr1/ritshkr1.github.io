@@ -18,7 +18,6 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'contacts', loadChildren: () => import('./contact-page/contact-page.module').then(m => m.ContactPageModule) },
       { path: 'experience', loadChildren: () => import('./experience-page/experience-page.module').then(m => m.ExperiencePageModule) },
       { path: 'works', loadChildren: () => import('./works-page/works-page.module').then(m => m.WorksPageModule) },
-      { path: 'weather', loadChildren: () => import('./weather/weather.module').then(m => m.WeatherModule) },
       ],
       { useHash: true }
     ),

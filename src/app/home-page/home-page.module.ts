@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page.component';
 import { EffectsComponent } from '../effects/effects.component';
+import { SharedModule } from '../shared.module';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent }
@@ -11,10 +12,11 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomePageComponent,
-    EffectsComponent
+    EffectsComponent,
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ]
 })

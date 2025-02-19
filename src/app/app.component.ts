@@ -7,8 +7,11 @@ import { Component, HostListener, ElementRef, Renderer2 } from '@angular/core';
 })
 export class AppComponent {
   isMobileMenuOpen: boolean = false; // Track if the mobile menu is open
+  currentYear :number
 
-  constructor(private renderer: Renderer2, private elRef: ElementRef) {}
+  constructor(private renderer: Renderer2, private elRef: ElementRef) {
+    this.currentYear = new Date().getFullYear();
+  }
 
   // Toggle the mobile menu visibility
   toggleMobileMenu(): void {

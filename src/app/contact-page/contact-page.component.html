@@ -1,55 +1,87 @@
 <div class="container mx-auto px-6 py-12">
-    <!-- Contacts Section -->
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+  <!-- Contacts Section -->
+  <div class="bg-white p-8  max-w-3xl mx-auto">
       <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-6">Get in Touch</h1>
-      
+
       <p class="text-lg text-gray-600 text-center mb-8">
-        Thank you for reaching out! I'm excited to hear from you. Below are my contact details, and I'm available for Angular development, project consultations, and collaborations.
+          I'm excited to hear from you! Whether you have a question, a project in mind, or just want to say hello, feel free to reach out.
       </p>
-  
+
+      <!-- Contact Information -->
       <div class="mb-6">
-        <h3 class="text-xl font-semibold text-gray-700 mb-2">Contact Information:</h3>
-        <p class="text-lg text-red-600">
-          <strong>Email:</strong> riteshroshan.kumar6&#64;gmail.com
-        </p>
-        <p class="text-lg text-red-600">
-          <strong>Phone:</strong> +91-8210961014
-        </p>
+          <h3 class="text-2xl font-semibold text-gray-700 mb-4 flex items-center">
+              <svg class="w-6 h-6 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M21 8V7l-3 2-3-2v1l3 2 3-2zM4 5h16a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z"/>
+              </svg>
+              Contact Information:
+          </h3>
+          <p class="text-lg text-gray-700">
+              <strong>Email:</strong> <a href="mailto:riteshroshan.kumar6&#64;gmail.com" class="text-blue-600 hover:underline">riteshroshan.kumar6&#64;gmail.com</a>
+          </p>
+          <p class="text-lg text-gray-700">
+              <strong>Phone:</strong> <a href="tel:+918210961014" class="text-blue-600 hover:underline">+91-8210961014</a>
+          </p>
       </div>
-  
+
+      <!-- What I Offer -->
       <div class="mb-6">
-        <h3 class="text-xl font-semibold text-gray-700 mb-2">What I Offer:</h3>
-        <p class="text-lg text-gray-600">
-          I specialize in Frontend Angular Development and am open to taking on projects of any size—whether it's building responsive websites, implementing UI components, or large-scale enterprise applications.
-        </p>
+          <h3 class="text-2xl font-semibold text-gray-700 mb-4 flex items-center">
+              <svg class="w-6 h-6 text-green-600 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/>
+              </svg>
+              What I Offer:
+          </h3>
+          <p class="text-lg text-gray-600">
+              I specialize in Frontend Angular Development and am open to taking on projects of any size—whether it's building responsive websites, implementing UI components, or large-scale enterprise applications.
+          </p>
       </div>
-  
+
+      <!-- Why Work With Me -->
       <div class="mb-6">
-        <h3 class="text-xl font-semibold text-gray-700 mb-2">Why Work With Me:</h3>
-        <ul class="list-disc ml-6 text-lg text-gray-600 space-y-2">
-          <li>Strong communicator with excellent collaboration skills.</li>
-          <li>Proven track record in delivering high-quality Angular projects on time.</li>
-          <li>Passionate about learning and staying up-to-date with the latest technologies.</li>
-          <li>Committed to ensuring your requirements are met and your vision is achieved.</li>
-        </ul>
+          <h3 class="text-2xl font-semibold text-gray-700 mb-4 flex items-center">
+              <svg class="w-6 h-6 text-yellow-600 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/>
+              </svg>
+              Why Work With Me:
+          </h3>
+          <ul class="list-disc ml-6 text-lg text-gray-600 space-y-2">
+              <li>Strong communicator with excellent collaboration skills.</li>
+              <li>Proven track record in delivering high-quality Angular projects on time.</li>
+              <li>Passionate about learning and staying up-to-date with the latest technologies.</li>
+              <li>Committed to ensuring your requirements are met and your vision is achieved.</li>
+          </ul>
       </div>
-  
-      <div>
-        <p class="text-lg text-gray-600 mb-4">
-          If you prefer to communicate through a different platform, feel free to reach out via LinkedIn, Twitter, or any other medium you're comfortable with.
-        </p>
-        <p class="text-lg font-semibold text-gray-700">
-          I look forward to hearing from you and collaborating on exciting projects!
-        </p>
+
+      <!-- Additional Information -->
+      <div class="text-lg text-gray-600 mb-8 text-center">
+          <p>If you prefer to communicate through a different platform, feel free to reach out via LinkedIn, Twitter, or any other medium you're comfortable with.</p>
+          <p class="mt-2 font-semibold text-gray-700">I look forward to hearing from you and collaborating on exciting projects!</p>
       </div>
-      
-      <div class="text-center mt-8">
-        <a href="mailto:riteshroshan.kumar6&#64;gmail.com">
-            <button class="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 transform hover:scale-105">
-                Send an Email
+
+      <!-- Send Email Button -->
+      <div class="text-center">
+          <a href="mailto:riteshroshan.kumar6&#64;gmail.com">
+              <button class="bg-blue-600 text-white py-2 px-8 rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                  Send an Email
               </button>
-        </a>
+          </a>
       </div>
-    </div>
+
+      <!-- Social Media Icons -->
+      <div class="mt-8 text-center space-x-4">
+          
+
+          <app-social-icons 
+        link="https://twitter.com/ritshkr"
+        iconClass="bi bi-twitter text-blue-700 hover:text-blue-800 transition duration-300" 
+        label="Twitter">
+      </app-social-icons>
+
+      <app-social-icons 
+        link="https://www.linkedin.com/in/ritsh/"
+        iconClass="bi bi-linkedin text-blue-700 hover:text-blue-800 transition duration-300" 
+        label="LinkedIn">
+      </app-social-icons>
+      </div>
   </div>
-  
+</div>

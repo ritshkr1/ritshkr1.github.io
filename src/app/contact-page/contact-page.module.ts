@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactPageComponent } from './contact-page.component';
+import { SharedModule } from '../shared.module';
 
 
 const routes: Routes = [
@@ -10,10 +11,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    ContactPageComponent
+    ContactPageComponent,
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ]
 })

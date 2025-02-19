@@ -1,76 +1,57 @@
-<div class="container-fluid">
-  <nav class="navbar navbar-light bg-light sticky top-0 w-full z-50 bg-white shadow-md">
-    <div class="container-fluid flex items-center justify-between w-full px-4">
+<!-- Page Wrapper with Flexbox Layout -->
+<div class="flex flex-col min-h-screen">
+
+  <!-- Navbar (Sticky at Top) -->
+  <nav class="sticky top-0 w-full z-50 bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-600 shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-4 py-3">
       <!-- Logo -->
-      <a class="navbar-brand title" routerLink="/">
-        <img
-          src="../assets/logo1.png"
-          alt="Logo"
-          width="150"
-          height="40"
-          class="d-inline-block align-text-top"
-        />
+      <a class="flex items-center space-x-2" routerLink="/">
+        <img src="../assets/logo1.png" alt="Logo" class="w-28 h-10 rounded-full" />
       </a>
 
-      <!-- Navbar Links: These should be hidden on small screens (mobile) and shown on large screens -->
-      <div class="hidden lg:flex items-center space-x-6 lg:space-x-8">
-        <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" routerLink="/">
-          Home
-        </a>
-        <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" routerLink="/about">
-          About
-        </a>
-        <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" routerLink="/experience">
-          Experience
-        </a>
-        <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2"  routerLink="/works">
-          Works
-        </a>
-        <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" routerLink="/contacts">
-          Contacts
-        </a>
-      </div>
-
-      <!-- Mobile Hamburger Menu Button: Visible only on small screens (mobile) -->
-      <button
-        class="lg:hidden text-gray-700 focus:outline-none"
-        (click)="toggleMobileMenu()"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <!-- Hamburger Icon for Mobile -->
+      <button class="lg:hidden text-white focus:outline-none" (click)="toggleMobileMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
+
+      <!-- Desktop Navbar Links -->
+      <div class="hidden lg:flex space-x-6">
+        <a class="nav-link" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a class="nav-link" routerLink="/about" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">About</a>
+        <a class="nav-link" routerLink="/experience" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Experience</a>
+        <a class="nav-link" routerLink="/works" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Works</a>
+        <a class="nav-link" routerLink="/contacts" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Contacts</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div *ngIf="isMobileMenuOpen" class="lg:hidden bg-white shadow-md absolute w-full">
+      <div class="flex flex-col space-y-2 p-4">
+        <a class="nav-link-mobile" routerLink="/" routerLinkActive="active-link-mobile" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMobileMenu()">Home</a>
+        <a class="nav-link-mobile" routerLink="/about" routerLinkActive="active-link-mobile" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMobileMenu()">About</a>
+        <a class="nav-link-mobile" routerLink="/experience" routerLinkActive="active-link-mobile" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMobileMenu()">Experience</a>
+        <a class="nav-link-mobile" routerLink="/works" routerLinkActive="active-link-mobile" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMobileMenu()">Works</a>
+        <a class="nav-link-mobile" routerLink="/contacts" routerLinkActive="active-link-mobile" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMobileMenu()">Contacts</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Mobile Menu (Only visible when isMobileMenuOpen is true) -->
-  <div *ngIf="isMobileMenuOpen" class="lg:hidden bg-white shadow-md absolute top-16 right-0 w-full z-20 p-6">
-    <div class="flex flex-col space-y-4">
-      <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" 
-         routerLink="/" (click)="toggleMobileMenu()">
-        Home
-      </a>
-      <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" 
-         routerLink="/about" (click)="toggleMobileMenu()">
-        About
-      </a>
-      <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" 
-          routerLink="/experience" (click)="toggleMobileMenu()">
-        Experience
-      </a>
-      <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" 
-       routerLink="/works" (click)="toggleMobileMenu()">
-        Works
-      </a>
-      <a class="navbar-brand nav-content text-lg font-semibold text-gray-700 hover:text-gray-900 px-2" 
-         routerLink="/contacts" (click)="toggleMobileMenu()">
-        Contacts
-      </a>
-    </div>
-  </div>
-</div>
+  <!-- Main Content Area (Scrollable) -->
+  <main class="flex-grow overflow-y-auto">
+    <router-outlet></router-outlet>
+  </main>
 
-<!-- Body -->
-<div class="pt-20">
-  <router-outlet></router-outlet>
+  <!-- Footer (Sticky at Bottom) -->
+  <footer class="sticky bottom-0 bg-gray-800 text-gray-400 text-center py-1 mt-auto">
+   
+      <p class="text-sm">
+        Designed and Developed by <span class="text-white font-semibold">Ritesh</span>
+      </p>
+      <p class="text-xs">
+        © {{ currentYear }} Ritesh Kumar. All Rights Reserved.
+      </p>
+
+  </footer>
 </div>
