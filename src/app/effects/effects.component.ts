@@ -7,15 +7,42 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class EffectsComponent implements OnInit, OnDestroy {
   words = [
-    'Angular Developer with frontend expertise.',
-    'Web Developer specializing in frontend technologies.',
-    'Experienced in HTML & CSS for responsive design.',
-    'Skilled in JavaScript & TypeScript for dynamic web apps.',
-    'Proficient in creating responsive, mobile-friendly layouts.',
-    'Experienced in building Single-page Applications (SPAs).',
-    'Expert in component-based architecture.',
-    'Familiar with Agile development processes.'
-]
+    "Software Developer",
+  "Frontend Developer",
+  "Angular",
+  "TypeScript",
+  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "RxJS",
+  "NgRx",
+  "Tailwind CSS",
+  "Angular Material",
+  "AG Grid",
+  "Responsive Design",
+  "SPA Development",
+  "Component Architecture",
+  "Mobile-First Design",
+  "Clean Code",
+  "Performance Optimization",
+  "REST API Integration",
+  // "Firebase Auth",
+  // "JWT",
+  "Git",
+  // "CI/CD",
+  // "GitHub Actions",
+  // "Agile"
+];
+//   [
+//     'Software Developer with frontend expertise.',
+//     'Web Developer specializing in frontend technologies.',
+//     'Experienced in HTML & CSS for responsive design.',
+//     'Skilled in JavaScript & TypeScript for dynamic web apps.',
+//     'Proficient in creating responsive, mobile-friendly layouts.',
+//     'Experienced in building Single-page Applications (SPAs).',
+//     'Expert in component-based architecture.',
+//     'Familiar with Agile development processes.'
+// ]
   i = 0; // Index of the current word
   timer: any;
 
