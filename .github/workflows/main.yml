@@ -35,8 +35,8 @@ jobs:
 
       - name: Commit and push updated docs
         run: |
-          git config --global ritshkr1 'github-actions[bot]'
-          git config --global riteshkumar.dev2@gmail.com 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'ritshkr1'
+          git config --global user.email 'riteshkumar.dev2@gmail.com'
           git add docs
           git commit -m "🔧 Auto-update /docs from build"
           git push
