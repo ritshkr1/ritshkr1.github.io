@@ -9,5 +9,18 @@ import { RouterModule } from '@angular/router';
   styleUrl: './main.scss'
 })
 export class Main {
+  isDarkMode = false;
+  constructor(){
+    const html = document.documentElement;
+  html.setAttribute('data-bs-theme', this.isDarkMode ? 'dark' : 'light');
+  }
+  toggleTheme() {
+  this.isDarkMode = !this.isDarkMode;
+  this.applyTheme();
+}
 
+applyTheme() {
+  const html = document.documentElement;
+  html.setAttribute('data-bs-theme', this.isDarkMode ? 'dark' : 'light');
+}
 }
