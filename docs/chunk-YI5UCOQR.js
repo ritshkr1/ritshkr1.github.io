@@ -1,0 +1,1 @@
+import{c as i}from"./chunk-KPHDVA7O.js";import{M as e,Q as r}from"./chunk-VFVIBIMF.js";var o=class t{constructor(a){this.http=a}getResumeData(){return this.http.get("./resume-data.json")}static \u0275fac=function(n){return new(n||t)(r(i))};static \u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"})};export{o as a};
