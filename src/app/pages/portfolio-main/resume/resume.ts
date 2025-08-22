@@ -6,6 +6,21 @@ interface Experience {
   location: string;
   roles: Role[];
 }
+interface Education {
+  degree: string;
+  type: string;
+  university: string;
+  startYear: number;
+  endYear: number;
+  location: string;
+  details: string[];
+}
+interface Skills {
+  languages: string[];
+  frameworks: string[];
+  tools: string[];
+  workflow: string[];
+}
 
 interface Role {
   title: string;
@@ -17,16 +32,24 @@ interface Role {
   selector: 'app-resume',
   imports: [],
   templateUrl: './resume.html',
-  styleUrl: './resume.scss'
+  styleUrl: './resume.scss',
 })
 export class Resume {
-  experiences: Experience[] = []
-  constructor(private resumeData : ResumeData){
-    this.resumeData.getResumeData().subscribe((data:any)=>{
-
-      this.experiences = data.experience
-       console.log(data,this.experiences);
-    })
+  experiences: Experience[] = [];
+  education: Education[] = [];
+  skills: Skills = {
+    languages: [],
+    frameworks: [],
+    tools: [],
+    workflow: [],
+  };
+  constructor(private resumeData: ResumeData) {
+    this.resumeData.getResumeData().subscribe((data: any) => {
+      this.experiences = data.experience;
+      this.education = data.education;
+      this.skills = data.skills;
+      console.log(data, this.experiences);
+    });
   }
   // experiences = [
   //   // {
@@ -72,40 +95,39 @@ export class Resume {
   //   }
   // ];
 
-  education = [
-    {
-      title: 'BTECH - CSE',
-      type: 'Undergraduate',
-      college: 'MRS PTU',
-      location: 'Patiala, IN',
-      duration: '2017 - 2021',
-      description: 'Gained a strong foundation in Networking, Object-Oriented Programming, and Data Structures using Java during my Computer Science degree. Enhanced my practical skills with Python during internships and later transitioned into full-stack web development, focusing on JavaScript and modern frontend technologies.',
-      technologies: ['Angular','TypeScript','JavaScript','Bootstrap','Angular Material','Git','Github','Npm'],
-      projects: null
-    }
-  ]
+  // education = [
+  //   {
+  //     title: 'BTECH - CSE',
+  //     type: 'Undergraduate',
+  //     college: 'MRS PTU',
+  //     location: 'Patiala, IN',
+  //     duration: '2017 - 2021',
+  //     description: 'Gained a strong foundation in Networking, Object-Oriented Programming, and Data Structures using Java during my Computer Science degree. Enhanced my practical skills with Python during internships and later transitioned into full-stack web development, focusing on JavaScript and modern frontend technologies.',
+  //     technologies: ['Angular','TypeScript','JavaScript','Bootstrap','Angular Material','Git','Github','Npm'],
+  //     projects: null
+  //   }
+  // ]
 
-  professionalSkills=[
-      'Angular 2+',
-      'React',
-      'RxJS',
-      'NgRx',
-      'Tailwind CSS',
-      'Angular Material',
-      'RESTAPI Integration',
-      'Git',
-      'GitHub',
-      'CI/CD (GitHub Actions)',
-      'Chrome DevTools',
-    ];
-    languages = [
-      'Java',
-      'Python',
-      'JavaScript',
-      'TypeScript',
-      'HTML5',
-      'CSS3',
-      'Bootstraps'
-    ]
-
+  // professionalSkills = [
+  //   'Angular 2+',
+  //   'React',
+  //   'RxJS',
+  //   'NgRx',
+  //   'Tailwind CSS',
+  //   'Angular Material',
+  //   'RESTAPI Integration',
+  //   'Git',
+  //   'GitHub',
+  //   'CI/CD (GitHub Actions)',
+  //   'Chrome DevTools',
+  // ];
+  // languages = [
+  //   'Java',
+  //   'Python',
+  //   'JavaScript',
+  //   'TypeScript',
+  //   'HTML5',
+  //   'CSS3',
+  //   'Bootstraps',
+  // ];
 }
